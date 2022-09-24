@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  width: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card .NFT {
+  width: 280px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card .pic {
+  width: 280px;
+  height: 280px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.card .pic:hover::before,
+.card .pic:hover::after {
+  cursor: pointer;
+  display: block;
+}
+
+.card .pic::after {
+  content: url(/images/icon-view.svg);
+  display: none;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+.card .pic::before {
+  content: "";
+  display: none;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: hsla(178.1, 100%, 50%, 0.4);
+  border-radius: 10px;
+}
+
+.card h1 {
+  color: hsl(0, 0%, 100%);
+  padding: 20px;
+  margin: 10px 0px 10px -20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card h1:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.card .textone {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.information .one {
+  color: hsl(178, 100%, 50%);
+  margin-bottom: 15px;
+}
+
+.information .two {
+  color: hsl(215, 51%, 70%);
+  margin-bottom: 15px;
+}
+
+.information .icon1 {
+  margin-bottom: -3px;
+}
+
+.information .icon2 {
+  margin-bottom: -3px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid hsl(215, 32%, 27%);
+  padding-top: 10px;
+}
+
+.footer .avatar {
+  width: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.footer p {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  font-weight: 300;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.footer span {
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.footer span:hover {
+  color: hsl(178, 100%, 50%);
+}
